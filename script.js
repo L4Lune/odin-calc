@@ -19,8 +19,14 @@ function multiply(numOne, numTwo) {
 }
 
 function divide(numOne, numTwo) {
-    result = numOne / numTwo;
-    return result;
+    if (numTwo > 0 || numTwo < 0){
+        result = numOne / numTwo;
+        return result;
+    } else {
+        const displaySelect = document.querySelector('#display');
+        displaySelect.textContent = 123;  
+    }
+
 }
 
 function operate(numOne, numTwo, operator) {
@@ -58,7 +64,6 @@ enterNums.forEach((button) => {
         } else if (result) {
             displaySelect.textContent = result;
             result = numOne;
-
         }
     })
 })
@@ -132,11 +137,11 @@ decimal.addEventListener('click', function(e) {
     displaySelect.textContent = `${displayNum}`;
 })
 
-const othersPressed = document.querySelectorAll('.num')
+const othersPressed = document.querySelectorAll('.others')
 othersPressed.forEach(other => other.addEventListener('transitionend', removeTransition));
 
 const numpadPressed = document.querySelectorAll('.num')
-numpadPressed.forEach(other => other.addEventListener('transitionend', removeTransition));
+numpadPressed.forEach(numpad => numpad.addEventListener('transitionend', removeTransition));
 
 function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
