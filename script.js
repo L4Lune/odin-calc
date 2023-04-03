@@ -72,7 +72,7 @@ enterNums.forEach((button) => {
 const opPad = document.querySelectorAll('.operator');
 opPad.forEach((button) => {
     button.addEventListener('click', function(e) {
-        button.classList.add('pressed');
+        button.classList.add('operatorsPressed');
         operator = button.id;
         if (result) {
             numOne = result;
@@ -115,10 +115,17 @@ clearCalc.addEventListener('click', function(e) {
 
 const plusOrMinus = document.querySelector('#plusOrMinus');
 plusOrMinus.addEventListener('click', function(e) {
-    plusOrMinus.classList.add('pressed');
-    displayNum = `-${displayNum}`
-    const displaySelect = document.querySelector('#display');
-    displaySelect.textContent = `${displayNum}`;
+    if (displayNum === `${displayNum}`) {
+        plusOrMinus.classList.add('othersPressed');
+        displayNum = `-${displayNum}`
+        const displaySelect = document.querySelector('#display');
+        displaySelect.textContent = `${displayNum}`;
+    } else if (displayNum === `-${displayNum}`) {
+        plusOrMinus.classList.add('othersPressed');
+        displayNum = `+${displayNum}`
+        const displaySelect = document.querySelector('#display');
+    }
+
 })
 
 const percent = document.querySelector('#percent');
@@ -143,8 +150,11 @@ othersPressed.forEach(other => other.addEventListener('transitionend', removeTra
 const numpadPressed = document.querySelectorAll('.num')
 numpadPressed.forEach(numpad => numpad.addEventListener('transitionend', removeTransition));
 
+const operatorsPressed = document.querySelectorAll('.operator');
+operatorsPressed.forEach(operator => operator.addEventListener('transitionend', removeTransition));
+
 function removeTransition(e) {
     if (e.propertyName !== 'transform') return;
-    e.target.classList.remove('othersPressed') || e.target.classList.remove('numpadPressed');
+    e.target.classList.remove('othersPressed') || e.target.classList.remove('numpadPressed') || e.target.classList.remove('operatorsPressed');
     console.log(e.propertyName);
 }

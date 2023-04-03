@@ -52,7 +52,7 @@ body {
     height: 120px;
 }
 
-.others, .num {
+.others, .num, .operator {
     transition:all 0.10s;
 }
 
@@ -64,6 +64,12 @@ body {
 
 .numpadPressed {
     background-color: rgb(71, 34, 1);
+    color: white;
+    transform: scale(1.0);
+}
+
+.operatorsPressed {
+    background-color: blue;
     color: white;
     transform: scale(1.0);
 }
