@@ -12,7 +12,7 @@ If operator = + do add, if operator = - do subtract etc
 
 Variables for firstNum, operator, and secondNum (done)
 
-Create html calc buttons and get it all lined up
+Create html calc buttons and get it all lined up (done)
 - 0-9, +, -, *, /, =, Clear, ., and a display
 
 JavaScript:
