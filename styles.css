@@ -3,7 +3,7 @@ body {
     flex-direction: column;
 }
 #display {
-    width: 111px;
+    width: 119px;
     height: 25px;
     border-style: solid;
     border-color: green;
@@ -27,9 +27,9 @@ body {
 #operatorPad {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 25px;
     height: 120px;
-    align-items: flex-start;
     border-style: solid;
     border-color: blue;
 }
