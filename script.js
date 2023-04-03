@@ -66,6 +66,7 @@ enterNums.forEach((button) => {
 const opPad = document.querySelectorAll('.operator');
 opPad.forEach((button) => {
     button.addEventListener('click', function(e) {
+        button.classList.add('pressed');
         operator = button.id;
         if (result) {
             numOne = result;
@@ -74,6 +75,10 @@ opPad.forEach((button) => {
         }
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = `${numOne}`;
+    })
+    const enterEqual = document.querySelector('#equals');
+    enterEqual.addEventListener('click', function(e) {
+        button.classList.remove('pressed');
     })
 })
 
