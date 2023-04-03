@@ -53,7 +53,7 @@ enterNums.forEach((button) => {
             displaySelect.textContent = displayNum;
             displayNum += button.id;
             displaySelect.textContent = displayNum;
-            numTwo = parseInt(displayNum);
+            numTwo = parseFloat(displayNum);
         } else if (result) {
             displaySelect.textContent = result;
             result = numOne;
@@ -70,7 +70,7 @@ opPad.forEach((button) => {
         if (result) {
             numOne = result;
         } else {
-            numOne = parseInt(displayNum); 
+            numOne = parseFloat(displayNum); 
         }
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = `${numOne}`;
@@ -116,7 +116,7 @@ percent.addEventListener('click', function(e) {
 
 })
 
-const decimal = document.querySelector('#decimal');
+const decimal = document.querySelector('.decimal');
 decimal.addEventListener('click', function(e) {
     displayNum = `${displayNum}.`;
     const displaySelect = document.querySelector('#display');
