@@ -40,3 +40,9 @@ function operate(numOne, numTwo, operator) {
     }
 }
 
+const numpad = document.querySelectorAll('.num');
+numpad.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    })
+})
