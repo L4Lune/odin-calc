@@ -51,3 +51,8 @@ body {
     width: 25px;
     height: 120px;
 }
+
+.pressed {
+    background-color: blue;
+    color: white;
+}
