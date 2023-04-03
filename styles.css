@@ -2,6 +2,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+#calc {
+    display: flex
+    flex-direction: column;
+    align-self: flex-start;
+    background-color: grey;
+}
+
 #display {
     width: 119px;
     height: 25px;
