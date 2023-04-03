@@ -79,10 +79,14 @@ opPad.forEach((button) => {
 
 const enterEqual = document.querySelector('#equals');
 enterEqual.addEventListener('click', function(e) {
-    operate(numOne, numTwo, operator);
-    console.log(result)
-    const displaySelect = document.querySelector('#display');
-    displaySelect.textContent = `${result}`
+        operate(numOne, numTwo, operator);
+        console.log(result)
+        const displaySelect = document.querySelector('#display');
+        displaySelect.textContent = `${result}`
+
+        if (result === null) {
+            displaySelect.textContent = '';
+        }
 })
 
 const clearCalc = document.querySelector('#C');
