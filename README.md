@@ -15,4 +15,9 @@ Variables for firstNum, operator, and secondNum
 Create html calc buttons and get it all lined up
 - 0-9, +, -, *, /, =, Clear, ., and a display
 
+JavaScript:
+ * Create functions to update the display on num click
+    * This should be stored in a variable when a user presses the operator
+    * 
+
 
