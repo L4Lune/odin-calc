@@ -7,7 +7,7 @@ Function for:
 * Division (done)
 
 
-* Operate
+* Operate (done-ish, will likely need to be reworked once I test this out)
 If operator = + do add, if operator = - do subtract etc
 
 Variables for firstNum, operator, and secondNum
