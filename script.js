@@ -1,3 +1,8 @@
+const numOne = null;
+const numTwo = null;
+const operator = null;
+const result = null;
+
 function add(numOne, numTwo) {
     result = numOne + numTwo;
     return result;
@@ -16,5 +21,22 @@ function multiply(numOne, numTwo) {
 function divide(numOne, numTwo) {
     result = numOne / numTwo;
     return result;
+}
+
+function operate(numOne, numTwo, operator) {
+    switch(operator) {
+        case '+':
+            add(numOne, numTwo);
+            break;
+        case '-':
+            subtract(numOne, numTwo);
+            break;
+        case '*':
+            multiply(numOne, numTwo);
+            break;
+        case '/':
+            divide(numOne, numTwo);
+            break;
+    }
 }
 
