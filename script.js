@@ -51,3 +51,5 @@ numpad.forEach((button) => {
         console.log(typeof(displayNum));
     })
 })
+
+const opPad = document.querySelectorAll('.operator');
