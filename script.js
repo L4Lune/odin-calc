@@ -1,7 +1,7 @@
 let numOne = null;
-const numTwo = null;
+let numTwo = null;
 let operator = null;
-const result = null;
+let result = null;
 
 function add(numOne, numTwo) {
     result = numOne + numTwo;
@@ -31,7 +31,7 @@ function operate(numOne, numTwo, operator) {
         case '-':
             subtract(numOne, numTwo);
             break;
-        case '*':
+        case 'x':
             multiply(numOne, numTwo);
             break;
         case '/':
@@ -41,13 +41,24 @@ function operate(numOne, numTwo, operator) {
 }
 
 // Function to allow the numpad to display numbers on the display div
-const numpad = document.querySelectorAll('.num');
+const enterNums = document.querySelectorAll('.num');
 let displayNum = '';
-numpad.forEach((button) => {
+enterNums.forEach((button) => {
     button.addEventListener('click', function(e) {
         displayNum += button.id;
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = displayNum;
+        if (numOne) {
+            displayNum = '';
+            displaySelect.textContent = displayNum;
+            displayNum += button.id;
+            displaySelect.textContent = displayNum;
+            numTwo = parseInt(displayNum);
+        } else if (result) {
+            displaySelect.textContent = result;
+            result = numOne;
+
+        }
     })
 })
 
@@ -56,8 +67,32 @@ const opPad = document.querySelectorAll('.operator');
 opPad.forEach((button) => {
     button.addEventListener('click', function(e) {
         operator = button.id;
-        numOne = displayNum; 
+        if (result) {
+            numOne = result;
+        } else {
+            numOne = parseInt(displayNum); 
+        }
+        const displaySelect = document.querySelector('#display');
+        displaySelect.textContent = `${numOne}`;
     })
 })
 
-const enterSecondNum = document.querySelectorAll
+const enterEqual = document.querySelector('#equals');
+enterEqual.addEventListener('click', function(e) {
+    operate(numOne, numTwo, operator);
+    console.log(result)
+    const displaySelect = document.querySelector('#display');
+    displaySelect.textContent = `${result}`
+})
+
+const clearCalc = document.querySelector('#C');
+clearCalc.addEventListener('click', function(e) {
+    numOne = null;
+    numTwo = null;
+    operator = null;
+    result = null;
+    displayNum = '';
+
+    const displaySelect = document.querySelector('#display');
+    displaySelect.textContent = '';
+})
