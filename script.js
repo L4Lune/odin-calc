@@ -45,6 +45,7 @@ const enterNums = document.querySelectorAll('.num');
 let displayNum = '';
 enterNums.forEach((button) => {
     button.addEventListener('click', function(e) {
+        button.classList.add('numpadPressed')
         displayNum += button.id;
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = displayNum;
@@ -96,6 +97,7 @@ enterEqual.addEventListener('click', function(e) {
 
 const clearCalc = document.querySelector('#C');
 clearCalc.addEventListener('click', function(e) {
+    clearCalc.classList.add('othersPressed');
     numOne = null;
     numTwo = null;
     operator = null;
@@ -108,6 +110,7 @@ clearCalc.addEventListener('click', function(e) {
 
 const plusOrMinus = document.querySelector('#plusOrMinus');
 plusOrMinus.addEventListener('click', function(e) {
+    plusOrMinus.classList.add('pressed');
     displayNum = `-${displayNum}`
     const displaySelect = document.querySelector('#display');
     displaySelect.textContent = `${displayNum}`;
@@ -115,6 +118,7 @@ plusOrMinus.addEventListener('click', function(e) {
 
 const percent = document.querySelector('#percent');
 percent.addEventListener('click', function(e) {
+    percent.classList.add('othersPressed');
     displayNum = displayNum / 100;
     const displaySelect = document.querySelector('#display');
     displaySelect.textContent = `${displayNum}`;
@@ -127,3 +131,15 @@ decimal.addEventListener('click', function(e) {
     const displaySelect = document.querySelector('#display');
     displaySelect.textContent = `${displayNum}`;
 })
+
+const othersPressed = document.querySelectorAll('.num')
+othersPressed.forEach(other => other.addEventListener('transitionend', removeTransition));
+
+const numpadPressed = document.querySelectorAll('.num')
+numpadPressed.forEach(other => other.addEventListener('transitionend', removeTransition));
+
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('othersPressed') || e.target.classList.remove('numpadPressed');
+    console.log(e.propertyName);
+}

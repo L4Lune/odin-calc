@@ -52,7 +52,18 @@ body {
     height: 120px;
 }
 
-.pressed {
+.others, .num {
+    transition:all 0.10s;
+}
+
+.othersPressed {
     background-color: blue;
     color: white;
+    transform: scale(1.0);
+}
+
+.numpadPressed {
+    background-color: rgb(71, 34, 1);
+    color: white;
+    transform: scale(1.0);
 }
