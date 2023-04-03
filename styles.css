@@ -4,7 +4,7 @@ body {
 }
 
 #calc {
-    display: flex
+    display: flex;
     flex-direction: column;
     align-self: flex-start;
     background-color: grey;
@@ -14,7 +14,11 @@ body {
     width: 119px;
     height: 25px;
     border-style: solid;
-    border-color: green;
+    border-width: 8px;
+    border-color: grey;
+    padding: 5px;
+    background-color: olivedrab;
+    justify-content: flex-end;
 }
 
 #pads {
