@@ -1,10 +1,10 @@
 # odin-calc
 
 Function for:
-* Addition
-* Subtraction
-* Multiplication
-* Division
+* Addition (done)
+* Subtraction (done)
+* Multiplication (done)
+* Division (done)
 
 
 * Operate
