@@ -1,6 +1,6 @@
-const numOne = null;
+let numOne = null;
 const numTwo = null;
-const operator = null;
+let operator = null;
 const result = null;
 
 function add(numOne, numTwo) {
@@ -40,6 +40,7 @@ function operate(numOne, numTwo, operator) {
     }
 }
 
+// Function to allow the numpad to display numbers on the display div
 const numpad = document.querySelectorAll('.num');
 let displayNum = '';
 numpad.forEach((button) => {
@@ -52,4 +53,17 @@ numpad.forEach((button) => {
     })
 })
 
+// Function to store the operator selection in the operator variable
 const opPad = document.querySelectorAll('.operator');
+opPad.forEach((button) => {
+    button.addEventListener('click', function(e) {
+        operator = button.id;
+        console.log(button.id);
+        console.log(operator);
+        numOne = displayNum; 
+    })
+})
+
+console.log(numOne);
+console.log(operator);
+console.log(numTwo);
