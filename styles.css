@@ -1,0 +1,18 @@
+#calc {
+    display: flex;;
+}
+
+#numpad {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border-style: solid;
+    border-color: red;
+}
+
+#operatorPad {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: blue;
+}
