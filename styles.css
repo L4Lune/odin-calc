@@ -18,8 +18,8 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    width: 80px;
-    height: 100px;
+    width: 90px;
+    height: 120px;
     border-style: solid;
     border-color: red;
 }
@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 25px;
-    height: 100px;
+    height: 120px;
     align-items: flex-start;
     border-style: solid;
     border-color: blue;
