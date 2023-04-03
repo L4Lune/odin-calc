@@ -46,7 +46,6 @@ let displayNum = '';
 numpad.forEach((button) => {
     button.addEventListener('click', function(e) {
         displayNum += button.id;
-        console.log(displayNum);
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = displayNum;
         console.log(typeof(displayNum));
@@ -58,12 +57,8 @@ const opPad = document.querySelectorAll('.operator');
 opPad.forEach((button) => {
     button.addEventListener('click', function(e) {
         operator = button.id;
-        console.log(button.id);
-        console.log(operator);
         numOne = displayNum; 
     })
 })
 
-console.log(numOne);
-console.log(operator);
-console.log(numTwo);
+const
