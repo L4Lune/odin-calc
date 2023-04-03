@@ -48,7 +48,6 @@ numpad.forEach((button) => {
         displayNum += button.id;
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = displayNum;
-        console.log(typeof(displayNum));
     })
 })
 
@@ -61,4 +60,4 @@ opPad.forEach((button) => {
     })
 })
 
-const
+const enterSecondNum = document.querySelectorAll
