@@ -101,3 +101,17 @@ clearCalc.addEventListener('click', function(e) {
     displaySelect.textContent = '';
 })
 
+const plusOrMinus = document.querySelector('#plusOrMinus');
+plusOrMinus.addEventListener('click', function(e) {
+    displayNum = `-${displayNum}`
+    const displaySelect = document.querySelector('#display');
+    displaySelect.textContent = `${displayNum}`;
+})
+
+const percent = document.querySelector('#percent');
+percent.addEventListener('click', function(e) {
+    displayNum = displayNum / 100;
+    const displaySelect = document.querySelector('#display');
+    displaySelect.textContent = `${displayNum}`;
+
+})
