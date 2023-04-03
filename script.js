@@ -118,7 +118,7 @@ percent.addEventListener('click', function(e) {
 
 const decimal = document.querySelector('#decimal');
 decimal.addEventListener('click', function(e) {
-    displayNum = displayNum + '.';
+    displayNum = `${displayNum}.`;
     const displaySelect = document.querySelector('#display');
     displaySelect.textContent = `${displayNum}`;
     console.log(displayNum)
