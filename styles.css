@@ -1,3 +1,7 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
 #display {
     width: 111px;
     height: 25px;
@@ -6,7 +10,7 @@
 }
 
 #pads {
-    display: flex;;
+    display: flex;
 }
 
 #numpad {

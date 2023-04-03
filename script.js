@@ -100,3 +100,4 @@ clearCalc.addEventListener('click', function(e) {
     const displaySelect = document.querySelector('#display');
     displaySelect.textContent = '';
 })
+
