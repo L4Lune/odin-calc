@@ -1,3 +1,8 @@
+@font-face {
+    font-family: dseg;
+    src: url(fonts-DSEG_v046/DSEG14-Modern/DSEG14Modern-Regular.ttf)
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -19,6 +24,7 @@ body {
     padding: 5px;
     background-color: olivedrab;
     justify-content: flex-end;
+    font-family: dseg;
 }
 
 #pads {
@@ -32,8 +38,6 @@ body {
     justify-content: center;
     width: 90px;
     height: 120px;
-    border-style: solid;
-    border-color: red;
 }
 
 .num {
@@ -46,6 +50,4 @@ body {
     justify-content: space-between;
     width: 25px;
     height: 120px;
-    border-style: solid;
-    border-color: blue;
 }
