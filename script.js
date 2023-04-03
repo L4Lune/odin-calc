@@ -41,8 +41,13 @@ function operate(numOne, numTwo, operator) {
 }
 
 const numpad = document.querySelectorAll('.num');
+let displayNum = '';
 numpad.forEach((button) => {
-    button.addEventListener('click', () => {
-        alert(button.id);
+    button.addEventListener('click', function(e) {
+        displayNum += button.id;
+        console.log(displayNum);
+        const displaySelect = document.querySelector('#display');
+        displaySelect.textContent = displayNum;
+        console.log(typeof(displayNum));
     })
 })
