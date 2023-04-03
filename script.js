@@ -22,11 +22,9 @@ function divide(numOne, numTwo) {
     if (numTwo > 0 || numTwo < 0){
         result = numOne / numTwo;
         return result;
-    } else {
-        const displaySelect = document.querySelector('#display');
-        displaySelect.textContent = 123;  
+    } else if (numTwo === 0) {
+        result = "Please No!"
     }
-
 }
 
 function operate(numOne, numTwo, operator) {
@@ -61,6 +59,7 @@ enterNums.forEach((button) => {
             displayNum += button.id;
             displaySelect.textContent = displayNum;
             numTwo = parseFloat(displayNum);
+            console.log(numTwo);
         } else if (result) {
             displaySelect.textContent = result;
             result = numOne;
@@ -81,10 +80,6 @@ opPad.forEach((button) => {
         }
         const displaySelect = document.querySelector('#display');
         displaySelect.textContent = `${numOne}`;
-    })
-    const enterEqual = document.querySelector('#equals');
-    enterEqual.addEventListener('click', function(e) {
-        button.classList.remove('pressed');
     })
 })
 
@@ -122,7 +117,7 @@ plusOrMinus.addEventListener('click', function(e) {
         displaySelect.textContent = `${displayNum}`;
     } else if (displayNum === `-${displayNum}`) {
         plusOrMinus.classList.add('othersPressed');
-        displayNum = `+${displayNum}`
+        displayNum = `${displayNum}`
         const displaySelect = document.querySelector('#display');
     }
 
