@@ -121,6 +121,4 @@ decimal.addEventListener('click', function(e) {
     displayNum = `${displayNum}.`;
     const displaySelect = document.querySelector('#display');
     displaySelect.textContent = `${displayNum}`;
-    console.log(displayNum)
-
 })
